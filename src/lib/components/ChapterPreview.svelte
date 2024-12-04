@@ -50,6 +50,13 @@
         "From vibrant urban life to serene rural landscapes, exploring Spain is an ongoing adventure. This chapter guides you through the most iconic regions, highlighting must-see tourist spots, local cuisine, and travel tips within the country.",
     },
   ];
+
+  let selectedChapterNumber = $state(1)
+  let selectedChapter = $derived(chapters.find(chapter => chapter.number === selectedChapterNumber))
+
+  function selectChapter(chapter) {
+    selectedChapterNumber = chapter.number
+  }
 </script>
 
 <section class="chapter-preview default-margin">
@@ -60,8 +67,10 @@
         <li>
           <button
             class="chapter-title"
+            class:selected-chapter-title ={selectedChapterNumber === chapter.number}
             aria-controls={`chapter-info-${chapter.number}`}
-            aria-expanded="true"
+            aria-expanded={selectedChapterNumber === chapter.number}
+            onclick={() => selectChapter(chapter)}
           >
             Chapter {chapter.number}: {chapter.title}
           </button>
@@ -70,19 +79,10 @@
     </ul>
     <div class="chapter-info">
       <h3 class="chapter-strapline italic mb-s">
-        Understanding Visas, Residency, and legal Essentials
+        {selectedChapter.title}
       </h3>
       <p>
-        Moving to Spain involves navigating a labyrinth of bureaucratic
-        processes that can feel overwhelming at first. This chapter breaks down
-        the essential steps required to secure your visa, establish residency,
-        and handle other legal formalities. Whether you're planning a short-term
-        stay or seeking permanent residency, understanding Spain's legal
-        framework is crucial. We'll explore the different types of visas
-        available, from student to work visas, and provide tips on how to
-        streamline your application process. Additionally, this chapter covers
-        essential documentation, such as obtaining a Número de Identidad de
-        Extranjero (NIE), which is your key to unlocking many services in Spain.
+        {selectedChapter.excerpt}
       </p>
     </div>
   </div>
