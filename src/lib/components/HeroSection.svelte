@@ -1,6 +1,7 @@
 <script>
   import bookCover from "$assets/book_cover.png"
   import phoneCover from "$assets/phone_cover.png"
+  import {Button} from "$components"
 </script>
 
 <section class="hero">
@@ -20,6 +21,7 @@
     <p class="light-grey">
       I moved to Spain seven years ago. The process was painful and difficult. I learned  most things the hard way: finding a job, getting a visa, calculating my cost of living, choosing an aprtment. That's why I wrote this e-book, to tell you how I did it. No bullshit, no stress.
     </p>
+    <Button>Purchase Ebook for $10</Button>
   </div>
 
 </section>
