@@ -1,21 +1,17 @@
 <script>
-  import chevronDown from "$assets/icons/chevron-down.svg"
+  import chevronDown from "$assets/icons/chevron-down.svg";
+
+  let { faq, isExpanded, ...props } = $props();
 </script>
 
-
-<button class="container mb-l">
+<button class="container mb-s" class:container-expanded = {isExpanded} {...props}>
   <div class="question-and-answer">
-    <p class="question mb-s">what will I learn from this book?</p>
+    <p class="question mb-s">{faq.question}</p>
     <p class="answer">
-      This ebook provides a comprehensive guide to relocating to Spain, covering
-      everything from securing the right visa and navigating Spain's legal
-      system to finding the perfect place to live and integrating into the local
-      culture. Whether you're moving for work, study, or retirement, this guide
-      equips you with the essential knowledge and practical steps to make your
-      transition as smooth as possible.
+      {faq.answer}
     </p>
   </div>
-  <img src={chevronDown} alt="chevron Down"/>
+  <img src={chevronDown} alt="chevron Down" />
 </button>
 
 <style>
