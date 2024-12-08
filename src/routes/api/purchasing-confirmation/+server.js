@@ -25,13 +25,13 @@ export async function POST({ request }) {
       <ul>
         <li>You will find your ebook attached to this email. Please download and save it for future reference.</li>
         <li>A separate purchase confirmation has been sent to your email as well.</li>
-        <li>If you have any questions or need further assistance, don't hesitate to reach out to us at support@kizo-agency.com.</li>
+        <li>If you have any questions or need further assistance, don't hesitate to reach out to us at jwesley1210@gmail.com.</li>
       </ul>
       <p>Thank you once again for choosing our guide. We wish you the best of luck on your journey to Spain!</p>
-      <p>Best regards,<br/>The Kizo Agency Team</p>
+      <p>Best regards,<br/>The Skys Team</p>
     `,
     attachments: [
-      {
+      {''
         content: Buffer.from(PDF_GUIDE_URL).toString('base64'),
         filename: 'Complete_Spain_Relocation_Guide.pdf',
         type: 'application/pdf',
