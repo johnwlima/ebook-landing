@@ -44,7 +44,7 @@
 
   function onclick(index) {
     if (questionCurrentlyExpanded === index) {
-      questionCurrentlyExpanded === -1;
+      questionCurrentlyExpanded = -1;
     } else {
       questionCurrentlyExpanded = index;
     }
