@@ -14,7 +14,7 @@ export async function POST({ request }) {
   const customerName = requestBody.data.object.customer_details.name;
 
   const message = {
-    from: 'onboarding@resend.dev',
+    from: 'John Lim <onboarding@resend.dev>',
     to: customerEmail,
     subject: 'Your Purchase Confirmation - Complete Spain Relocation Guide',
     html: `
@@ -41,7 +41,7 @@ export async function POST({ request }) {
   };
 
   try {
-    const response = await resend.sendEmail(message);
+    const response = await resend.emails.send(message);
     console.log('Email sent successfully:', response);
   } catch (error) {
     console.error('Error sending email:', error);
