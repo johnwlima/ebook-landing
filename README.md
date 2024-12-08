@@ -1,5 +1,5 @@
 ### Landing page with Svelte and Svelte-kit
-Check it out at: 
-https://ebook-landing-five-delta.vercel.app/
+[Go to production version ↗](https://ebook-landing-five-delta.vercel.app/)
 
-
+## Objective
+To Learn and pratice how to use Svelte 5, Svelte-Kit, Stripe and Resend.
