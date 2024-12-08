@@ -11,12 +11,11 @@ const resend = new Resend(RESEND_API_KEY);
 
 const stripe = new Stripe(STRIPE_API_KEY, { apiVersion: "2022-11-15" });
 
-// URL do PDF
 const PDF_GUIDE_URL =
   "https://narrify-public.s3.eu-central-1.amazonaws.com/sample.pdf";
 
 export async function POST({ request }) {
-  const body = await request.text(); // Obtenha o corpo cru para a verificação do webhook
+  const body = await request.text(); 
   const signature = request.headers.get("stripe-signature") || "";
 
   try {
