@@ -14,7 +14,7 @@ export async function POST({ request }) {
   const customerName = requestBody.data.object.customer_details.name;
 
   const message = {
-    from: 'jwesley1210@hotmail.com',
+    from: 'onboarding@resend.dev',
     to: customerEmail,
     subject: 'Your Purchase Confirmation - Complete Spain Relocation Guide',
     html: `
